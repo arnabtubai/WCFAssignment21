@@ -1,0 +1,39 @@
+﻿@model MVCFirst.CalculatorReference.CalculatorClient
+
+@{
+    ViewBag.Title = "Calculator";
+}
+
+<h2>Calculator</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>CalculatorClient</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="number" name="txtFirst" required placeholder="Enter number" />
+                <input type="number" name="txtSecond" required placeholder="Enter number" />
+
+                <input type="submit" value="Sum" class="btn btn-default" name="CallWCF" formaction=@Url.Action("Index") formmethod="post" />
+                <input type="submit" value="Subtract" class="btn btn-default" name="CallWCF" formaction=@Url.Action("Index") formmethod="post" />
+            </div>
+        </div>
+    </div>
+}
+<div class="alert alert-success" role="alert">
+   
+    @ViewBag.Message
+</div>
+<div>
+   
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

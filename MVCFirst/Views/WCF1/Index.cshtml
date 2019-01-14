@@ -1,0 +1,46 @@
+﻿@model MVCFirst.Models.WCF1Models
+
+@{
+    ViewBag.Title = "WCF Assignment 1";
+}
+
+<h2>WCF1</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>WCF1 Calls with TCP and http</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Invoke as http" class="btn btn-default" name="CallWCF" formaction=@Url.Action("Index") formmethod="post" />
+            <input type="submit" value="Invoke as tcp" class="btn btn-default" name="CallWCF" formaction=@Url.Action("Index") formmethod="post" />
+        </div>
+
+    </div>
+    <div class="alert alert-success" role="alert">
+        @Html.LabelFor(model => model.Message)
+        @ViewBag.Message
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

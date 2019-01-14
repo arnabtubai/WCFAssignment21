@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCFirst", "MVCFirst\MVCFirst.csproj", "{B298A4B3-33B0-4601-B66A-B17E5B1ABF99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFAssign", "WCFAssign\WCFAssign.csproj", "{F430C9AD-91D6-4B43-BAC3-5060CD0FA767}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHost", "SelfHost\SelfHost.csproj", "{A744EC96-D4B4-4361-A233-7C639184D6B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B298A4B3-33B0-4601-B66A-B17E5B1ABF99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B298A4B3-33B0-4601-B66A-B17E5B1ABF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B298A4B3-33B0-4601-B66A-B17E5B1ABF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B298A4B3-33B0-4601-B66A-B17E5B1ABF99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F430C9AD-91D6-4B43-BAC3-5060CD0FA767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F430C9AD-91D6-4B43-BAC3-5060CD0FA767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F430C9AD-91D6-4B43-BAC3-5060CD0FA767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F430C9AD-91D6-4B43-BAC3-5060CD0FA767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A744EC96-D4B4-4361-A233-7C639184D6B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A744EC96-D4B4-4361-A233-7C639184D6B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A744EC96-D4B4-4361-A233-7C639184D6B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A744EC96-D4B4-4361-A233-7C639184D6B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3259F3A0-E6F3-4CAF-BB0C-3336CF21976F}
+	EndGlobalSection
+EndGlobal

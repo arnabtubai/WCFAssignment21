@@ -1,0 +1,41 @@
+﻿@model MVCFirst.Models.JobModels
+
+@{
+    ViewBag.Title = "Job Search";
+}
+
+<h2>Job Search</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <p>
+        @Html.TextBox("txtJobRole", Model.JobRole)
+        <input type="submit" value="Search" formaction=@Url.Action("Index") formmethod="post" />
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            Job Id
+        </th>
+        <th>Company</th>
+        <th>Job Role</th>
+    </tr>
+
+    @foreach (var item in Model.JobList)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobRole)
+            </td>
+            
+        </tr>
+    }
+
+</table>
